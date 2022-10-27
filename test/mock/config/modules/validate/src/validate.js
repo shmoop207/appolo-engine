@@ -14,8 +14,8 @@ let ValidatePipeLine = class ValidatePipeLine {
     }
 };
 ValidatePipeLine = tslib_1.__decorate([
-    inject_1.define(),
-    inject_1.singleton()
+    (0, inject_1.define)(),
+    (0, inject_1.singleton)()
 ], ValidatePipeLine);
 exports.ValidatePipeLine = ValidatePipeLine;
 //# sourceMappingURL=validate.js.map

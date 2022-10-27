@@ -9,7 +9,7 @@ let should = chai.should();
 describe('modules', function () {
     let app;
     beforeEach(async () => {
-        app = index_1.createApp({
+        app = (0, index_1.createApp)({
             root: process.cwd() + '/test/mock'
         });
         await app.launch();

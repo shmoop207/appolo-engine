@@ -9,7 +9,7 @@ const manager4_1 = require("../mock/src/manager/manager4");
 describe('Pipeline', function () {
     let app;
     beforeEach(async () => {
-        app = index_1.createApp({
+        app = (0, index_1.createApp)({
             root: process.cwd() + '/test/mock'
         });
         await app.launch();

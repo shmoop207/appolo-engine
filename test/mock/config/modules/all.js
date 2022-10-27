@@ -16,11 +16,11 @@ const testLoadModule_1 = require("./testLoad/testLoadModule");
 const test3Module_1 = require("./test3/test3Module");
 module.exports = async function (env, app, modules) {
     await modules.loadFn(logger_1.default);
-    await modules.loadFn(logger2_1.default({ test: 'test2' }));
-    await modules.loadFn(logger3_1.default({ test: 'test3' }), logger4_1.default({ test: 'test4' }));
-    await modules.loadFn(logger5_1.default({ test: 'test5' }));
-    await modules.loadFn(logger6_1.default({ test: 'test6' }));
-    await app.module.loadFn(logger7_1.default({ test: 'test7' }));
+    await modules.loadFn((0, logger2_1.default)({ test: 'test2' }));
+    await modules.loadFn((0, logger3_1.default)({ test: 'test3' }), (0, logger4_1.default)({ test: 'test4' }));
+    await modules.loadFn((0, logger5_1.default)({ test: 'test5' }));
+    await modules.loadFn((0, logger6_1.default)({ test: 'test6' }));
+    await app.module.loadFn((0, logger7_1.default)({ test: 'test7' }));
     await app.module.load(testLoadModule_1.TestLoadModule);
     if (env.testLoadModule) {
         app.module.use(testModule_1.TestModule).use(validateModule_1.ValidateModule).use(baseModuleClassModule_1.BaseModuleClassModule);

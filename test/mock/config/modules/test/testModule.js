@@ -10,7 +10,7 @@ let TestModule = class TestModule extends index_1.Module {
     }
 };
 TestModule = tslib_1.__decorate([
-    index_1.module({})
+    (0, index_1.module)({})
 ], TestModule);
 exports.TestModule = TestModule;
 //# sourceMappingURL=testModule.js.map

@@ -12,21 +12,21 @@ let DbFactory = class DbFactory {
     }
 };
 tslib_1.__decorate([
-    inject_1.inject(),
+    (0, inject_1.inject)(),
     tslib_1.__metadata("design:type", Object)
 ], DbFactory.prototype, "moduleOptions", void 0);
 tslib_1.__decorate([
-    inject_1.inject(),
+    (0, inject_1.inject)(),
     tslib_1.__metadata("design:type", Object)
 ], DbFactory.prototype, "env2", void 0);
 tslib_1.__decorate([
-    inject_1.inject(),
+    (0, inject_1.inject)(),
     tslib_1.__metadata("design:type", test_1.Test)
 ], DbFactory.prototype, "test", void 0);
 DbFactory = tslib_1.__decorate([
-    inject_1.define(),
-    inject_1.singleton(),
-    inject_1.factory()
+    (0, inject_1.define)(),
+    (0, inject_1.singleton)(),
+    (0, inject_1.factory)()
 ], DbFactory);
 exports.DbFactory = DbFactory;
 //# sourceMappingURL=dbFactory.js.map

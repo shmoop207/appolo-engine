@@ -10,17 +10,17 @@ let NestedProvider = class NestedProvider {
     }
 };
 tslib_1.__decorate([
-    inject_1.inject(),
+    (0, inject_1.inject)(),
     tslib_1.__metadata("design:type", Object)
 ], NestedProvider.prototype, "dbMock2DbManager", void 0);
 tslib_1.__decorate([
-    inject_1.inject(),
+    (0, inject_1.inject)(),
     tslib_1.__metadata("design:type", Object)
 ], NestedProvider.prototype, "moduleOptions", void 0);
 NestedProvider = tslib_1.__decorate([
-    inject_1.define(),
-    inject_1.singleton(),
-    inject_1.factory()
+    (0, inject_1.define)(),
+    (0, inject_1.singleton)(),
+    (0, inject_1.factory)()
 ], NestedProvider);
 exports.NestedProvider = NestedProvider;
 //# sourceMappingURL=nestedProvider.js.map

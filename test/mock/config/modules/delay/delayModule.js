@@ -31,7 +31,7 @@ let DelayModule = DelayModule_1 = class DelayModule extends index_1.Module {
     }
 };
 DelayModule = DelayModule_1 = tslib_1.__decorate([
-    index_1.module({ exports: [] })
+    (0, index_1.module)({ exports: [] })
 ], DelayModule);
 exports.DelayModule = DelayModule;
 //# sourceMappingURL=delayModule.js.map

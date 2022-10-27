@@ -12,18 +12,18 @@ let Test = class Test {
     }
 };
 tslib_1.__decorate([
-    inject_1.inject(),
+    (0, inject_1.inject)(),
     tslib_1.__metadata("design:type", Object)
 ], Test.prototype, "rootEnv", void 0);
 tslib_1.__decorate([
-    inject_1.init(),
+    (0, inject_1.init)(),
     tslib_1.__metadata("design:type", Function),
     tslib_1.__metadata("design:paramtypes", []),
     tslib_1.__metadata("design:returntype", void 0)
 ], Test.prototype, "initialize", null);
 Test = tslib_1.__decorate([
-    inject_1.define(),
-    inject_1.singleton()
+    (0, inject_1.define)(),
+    (0, inject_1.singleton)()
 ], Test);
 exports.Test = Test;
 //# sourceMappingURL=test.js.map

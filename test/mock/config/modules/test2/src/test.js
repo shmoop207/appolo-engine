@@ -9,8 +9,8 @@ let Test2 = class Test2 {
     }
 };
 Test2 = tslib_1.__decorate([
-    inject_1.define(),
-    inject_1.singleton()
+    (0, inject_1.define)(),
+    (0, inject_1.singleton)()
 ], Test2);
 exports.Test2 = Test2;
 //# sourceMappingURL=test.js.map

@@ -31,11 +31,11 @@ let DbModule = class DbModule extends index_1.Module {
     }
 };
 tslib_1.__decorate([
-    inject_1.lazy(),
+    (0, inject_1.lazy)(),
     tslib_1.__metadata("design:type", dbManager_1.DbManager)
 ], DbModule.prototype, "dbManager", void 0);
 DbModule = tslib_1.__decorate([
-    index_1.module()
+    (0, index_1.module)()
 ], DbModule);
 exports.DbModule = DbModule;
 //# sourceMappingURL=dbModule.js.map

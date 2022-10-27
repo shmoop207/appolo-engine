@@ -9,16 +9,16 @@ let DelayManager = class DelayManager {
     }
 };
 tslib_1.__decorate([
-    inject_1.inject(),
+    (0, inject_1.inject)(),
     tslib_1.__metadata("design:type", Object)
 ], DelayManager.prototype, "env", void 0);
 tslib_1.__decorate([
-    inject_1.inject(),
+    (0, inject_1.inject)(),
     tslib_1.__metadata("design:type", Object)
 ], DelayManager.prototype, "delayProvider", void 0);
 DelayManager = tslib_1.__decorate([
-    inject_1.define(),
-    inject_1.singleton()
+    (0, inject_1.define)(),
+    (0, inject_1.singleton)()
 ], DelayManager);
 exports.DelayManager = DelayManager;
 //# sourceMappingURL=delayManager.js.map

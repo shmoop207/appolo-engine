@@ -9,7 +9,7 @@ let BaseModuleClassModule = class BaseModuleClassModule extends index_1.Module {
     }
 };
 BaseModuleClassModule = tslib_1.__decorate([
-    index_1.module({})
+    (0, index_1.module)({})
 ], BaseModuleClassModule);
 exports.BaseModuleClassModule = BaseModuleClassModule;
 //# sourceMappingURL=baseModuleClassModule.js.map

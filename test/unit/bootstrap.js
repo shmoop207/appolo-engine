@@ -8,7 +8,7 @@ let should = chai.should();
 describe('bootstrap', function () {
     let app;
     beforeEach(async () => {
-        app = index_1.createApp({
+        app = (0, index_1.createApp)({
             root: process.cwd() + '/test/mock'
         });
         await app.module.use(testModule_1.Test2Module);

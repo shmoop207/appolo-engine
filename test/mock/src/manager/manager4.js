@@ -19,9 +19,9 @@ let Manager4 = class Manager4 extends events_1.EventDispatcher {
     }
 };
 Manager4 = tslib_1.__decorate([
-    inject_1.define(),
-    inject_1.singleton(),
-    pipelineTest_1.pipeMultiValue(2),
+    (0, inject_1.define)(),
+    (0, inject_1.singleton)(),
+    (0, pipelineTest_1.pipeMultiValue)(2),
     tslib_1.__metadata("design:paramtypes", [])
 ], Manager4);
 exports.default = Manager4;

@@ -33,39 +33,39 @@ let Manager = class Manager extends events_1.EventDispatcher {
     }
 };
 tslib_1.__decorate([
-    pipelineTest_1.guardSum(5),
+    (0, pipelineTest_1.guardSum)(5),
     tslib_1.__metadata("design:type", Function),
     tslib_1.__metadata("design:paramtypes", [Number, Number]),
     tslib_1.__metadata("design:returntype", void 0)
 ], Manager.prototype, "testGuard", null);
 tslib_1.__decorate([
-    pipelineTest_1.interceptorTimeout(5),
+    (0, pipelineTest_1.interceptorTimeout)(5),
     tslib_1.__metadata("design:type", Function),
     tslib_1.__metadata("design:paramtypes", [Number, Number]),
     tslib_1.__metadata("design:returntype", Promise)
 ], Manager.prototype, "testInterceptorTimeout", null);
 tslib_1.__decorate([
-    pipelineTest_1.interceptorMultiValue(2),
+    (0, pipelineTest_1.interceptorMultiValue)(2),
     tslib_1.__metadata("design:type", Function),
     tslib_1.__metadata("design:paramtypes", [Number, Number]),
     tslib_1.__metadata("design:returntype", Promise)
 ], Manager.prototype, "testInterceptorMultiValue", null);
 tslib_1.__decorate([
-    tslib_1.__param(0, pipelineTest_1.pipeMultiValue(2)),
+    tslib_1.__param(0, (0, pipelineTest_1.pipeMultiValue)(2)),
     tslib_1.__metadata("design:type", Function),
     tslib_1.__metadata("design:paramtypes", [Number, Number]),
     tslib_1.__metadata("design:returntype", Promise)
 ], Manager.prototype, "testPipeMultiValue", null);
 tslib_1.__decorate([
-    pipelineTest_1.catchError(),
+    (0, pipelineTest_1.catchError)(),
     tslib_1.__metadata("design:type", Function),
     tslib_1.__metadata("design:paramtypes", [Number, Number]),
     tslib_1.__metadata("design:returntype", Promise)
 ], Manager.prototype, "testCatchError", null);
 Manager = tslib_1.__decorate([
-    inject_1.define(),
-    inject_1.singleton(),
-    pipelineDecorators_1.pipelineInstance(pipelineTest_1.PipelineTestOnCreate),
+    (0, inject_1.define)(),
+    (0, inject_1.singleton)(),
+    (0, pipelineDecorators_1.pipelineInstance)(pipelineTest_1.PipelineTestOnCreate),
     tslib_1.__metadata("design:paramtypes", [])
 ], Manager);
 exports.Manager = Manager;

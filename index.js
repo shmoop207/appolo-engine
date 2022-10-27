@@ -42,7 +42,8 @@ var events_1 = require("./lib/events/events");
 Object.defineProperty(exports, "Events", { enumerable: true, get: function () { return events_1.Events; } });
 var pipelineContext_1 = require("./lib/pipelines/context/pipelineContext");
 Object.defineProperty(exports, "PipelineContext", { enumerable: true, get: function () { return pipelineContext_1.PipelineContext; } });
-exports.createApp = function (options) {
+let createApp = function (options) {
     return new app_1.App(options);
 };
+exports.createApp = createApp;
 //# sourceMappingURL=index.js.map

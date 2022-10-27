@@ -20,17 +20,20 @@ export class FilesLoader {
 
     private static async* _walk(dir: string) {
 
-        let [err, dirs] = await Promises.to<fs.Dir, Error>(fs.promises.opendir(dir))
+        let [err, dirs] = await Promises.to<string[], Error>(fs.promises.readdir(dir))
 
         if (err) {
             return;
         }
 
         for await (const d of dirs) {
-            const file = path.join(dir, d.name);
-            if (d.isDirectory() && !file.startsWith("~")) {
+            const file = path.join(dir, d);
+
+          let stat = await fs.promises.stat(file)
+
+            if (stat.isDirectory() && !file.startsWith("~")) {
                 yield* await this._walk(file);
-            } else if (d.isFile() && file.endsWith(".js") && !file.startsWith("~")) {
+            } else if (stat.isFile() && file.endsWith(".js") && !file.startsWith("~")) {
                 yield file;
             }
         }

@@ -44,19 +44,19 @@ let Test3Module = class Test3Module extends index_1.Module {
     }
 };
 tslib_1.__decorate([
-    index_2.initAsync(),
+    (0, index_2.initAsync)(),
     tslib_1.__metadata("design:type", Function),
     tslib_1.__metadata("design:paramtypes", []),
     tslib_1.__metadata("design:returntype", void 0)
 ], Test3Module.prototype, "onInjectInitialize", null);
 tslib_1.__decorate([
-    index_2.bootstrapAsync(),
+    (0, index_2.bootstrapAsync)(),
     tslib_1.__metadata("design:type", Function),
     tslib_1.__metadata("design:paramtypes", []),
     tslib_1.__metadata("design:returntype", void 0)
 ], Test3Module.prototype, "onInjectBootstrap", null);
 Test3Module = tslib_1.__decorate([
-    index_1.module()
+    (0, index_1.module)()
 ], Test3Module);
 exports.Test3Module = Test3Module;
 //# sourceMappingURL=test3Module.js.map

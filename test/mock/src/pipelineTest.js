@@ -12,7 +12,7 @@ let PipelineTest = class PipelineTest {
     }
 };
 PipelineTest = tslib_1.__decorate([
-    inject_1.define()
+    (0, inject_1.define)()
 ], PipelineTest);
 exports.PipelineTest = PipelineTest;
 let PipelineTest2 = class PipelineTest2 {
@@ -22,7 +22,7 @@ let PipelineTest2 = class PipelineTest2 {
     }
 };
 PipelineTest2 = tslib_1.__decorate([
-    inject_1.define()
+    (0, inject_1.define)()
 ], PipelineTest2);
 exports.PipelineTest2 = PipelineTest2;
 let PipelineTestOnCreate = class PipelineTestOnCreate {
@@ -32,7 +32,7 @@ let PipelineTestOnCreate = class PipelineTestOnCreate {
     }
 };
 PipelineTestOnCreate = tslib_1.__decorate([
-    inject_1.define()
+    (0, inject_1.define)()
 ], PipelineTestOnCreate);
 exports.PipelineTestOnCreate = PipelineTestOnCreate;
 let GuardTest = class GuardTest {
@@ -43,11 +43,11 @@ let GuardTest = class GuardTest {
     }
 };
 GuardTest = tslib_1.__decorate([
-    inject_1.define()
+    (0, inject_1.define)()
 ], GuardTest);
 exports.GuardTest = GuardTest;
 function guardSum(max) {
-    return index_1.guard(GuardTest, { max });
+    return (0, index_1.guard)(GuardTest, { max });
 }
 exports.guardSum = guardSum;
 let InterceptorTimeout = class InterceptorTimeout {
@@ -56,11 +56,11 @@ let InterceptorTimeout = class InterceptorTimeout {
     }
 };
 InterceptorTimeout = tslib_1.__decorate([
-    inject_1.define()
+    (0, inject_1.define)()
 ], InterceptorTimeout);
 exports.InterceptorTimeout = InterceptorTimeout;
 function interceptorTimeout(timeout) {
-    return index_1.intercept(InterceptorTimeout, { timeout });
+    return (0, index_1.intercept)(InterceptorTimeout, { timeout });
 }
 exports.interceptorTimeout = interceptorTimeout;
 let InterceptorMultiValue = class InterceptorMultiValue {
@@ -70,11 +70,11 @@ let InterceptorMultiValue = class InterceptorMultiValue {
     }
 };
 InterceptorMultiValue = tslib_1.__decorate([
-    inject_1.define()
+    (0, inject_1.define)()
 ], InterceptorMultiValue);
 exports.InterceptorMultiValue = InterceptorMultiValue;
 function interceptorMultiValue(multi) {
-    return index_1.intercept(InterceptorMultiValue, { multi });
+    return (0, index_1.intercept)(InterceptorMultiValue, { multi });
 }
 exports.interceptorMultiValue = interceptorMultiValue;
 let PipeMultiValue = class PipeMultiValue {
@@ -83,11 +83,11 @@ let PipeMultiValue = class PipeMultiValue {
     }
 };
 PipeMultiValue = tslib_1.__decorate([
-    inject_1.define()
+    (0, inject_1.define)()
 ], PipeMultiValue);
 exports.PipeMultiValue = PipeMultiValue;
 function pipeMultiValue(multi) {
-    return index_1.pipe(PipeMultiValue, { multi });
+    return (0, index_1.pipe)(PipeMultiValue, { multi });
 }
 exports.pipeMultiValue = pipeMultiValue;
 let ExceptionPipeLine = class ExceptionPipeLine {
@@ -100,11 +100,11 @@ let ExceptionPipeLine = class ExceptionPipeLine {
     }
 };
 ExceptionPipeLine = tslib_1.__decorate([
-    inject_1.define()
+    (0, inject_1.define)()
 ], ExceptionPipeLine);
 exports.ExceptionPipeLine = ExceptionPipeLine;
 function catchError() {
-    return index_1.exception(ExceptionPipeLine, {});
+    return (0, index_1.exception)(ExceptionPipeLine, {});
 }
 exports.catchError = catchError;
 //# sourceMappingURL=pipelineTest.js.map

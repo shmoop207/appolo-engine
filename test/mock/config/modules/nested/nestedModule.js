@@ -20,7 +20,7 @@ let NestedModule = NestedModule_1 = class NestedModule extends index_1.Module {
     }
 };
 NestedModule = NestedModule_1 = tslib_1.__decorate([
-    index_1.module()
+    (0, index_1.module)()
 ], NestedModule);
 exports.NestedModule = NestedModule;
 //# sourceMappingURL=nestedModule.js.map

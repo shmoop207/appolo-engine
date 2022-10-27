@@ -16,7 +16,7 @@ describe("decorator", function () {
             }
         }
         tslib_1.__decorate([
-            helpers_1.throttle(10),
+            (0, helpers_1.throttle)(10),
             tslib_1.__metadata("design:type", Function),
             tslib_1.__metadata("design:paramtypes", []),
             tslib_1.__metadata("design:returntype", void 0)
@@ -38,7 +38,7 @@ describe("decorator", function () {
             }
         }
         tslib_1.__decorate([
-            helpers_1.debounce(10),
+            (0, helpers_1.debounce)(10),
             tslib_1.__metadata("design:type", Function),
             tslib_1.__metadata("design:paramtypes", []),
             tslib_1.__metadata("design:returntype", void 0)
@@ -80,7 +80,7 @@ describe("decorator", function () {
             }
         }
         tslib_1.__decorate([
-            helpers_1.delay(10),
+            (0, helpers_1.delay)(10),
             tslib_1.__metadata("design:type", Function),
             tslib_1.__metadata("design:paramtypes", []),
             tslib_1.__metadata("design:returntype", void 0)
@@ -102,7 +102,7 @@ describe("decorator", function () {
             }
         }
         tslib_1.__decorate([
-            helpers_1.cache(),
+            (0, helpers_1.cache)(),
             tslib_1.__metadata("design:type", Function),
             tslib_1.__metadata("design:paramtypes", []),
             tslib_1.__metadata("design:returntype", void 0)
@@ -123,7 +123,7 @@ describe("decorator", function () {
             }
         }
         tslib_1.__decorate([
-            helpers_1.cache(),
+            (0, helpers_1.cache)(),
             tslib_1.__metadata("design:type", Function),
             tslib_1.__metadata("design:paramtypes", []),
             tslib_1.__metadata("design:returntype", Promise)
@@ -144,7 +144,7 @@ describe("decorator", function () {
             }
         }
         tslib_1.__decorate([
-            helpers_1.cache({ refresh: true, maxAge: 20 }),
+            (0, helpers_1.cache)({ refresh: true, maxAge: 20 }),
             tslib_1.__metadata("design:type", Function),
             tslib_1.__metadata("design:paramtypes", []),
             tslib_1.__metadata("design:returntype", Promise)
@@ -170,13 +170,13 @@ describe("decorator", function () {
             }
         }
         tslib_1.__decorate([
-            helpers_1.once(),
+            (0, helpers_1.once)(),
             tslib_1.__metadata("design:type", Function),
             tslib_1.__metadata("design:paramtypes", []),
             tslib_1.__metadata("design:returntype", void 0)
         ], Test.prototype, "handle", null);
         tslib_1.__decorate([
-            helpers_1.once(2),
+            (0, helpers_1.once)(2),
             tslib_1.__metadata("design:type", Function),
             tslib_1.__metadata("design:paramtypes", []),
             tslib_1.__metadata("design:returntype", void 0)

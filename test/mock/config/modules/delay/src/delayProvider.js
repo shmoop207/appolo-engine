@@ -12,13 +12,13 @@ let DelayProvider = class DelayProvider {
     }
 };
 tslib_1.__decorate([
-    inject_1.inject(),
+    (0, inject_1.inject)(),
     tslib_1.__metadata("design:type", Object)
 ], DelayProvider.prototype, "moduleOptions", void 0);
 DelayProvider = tslib_1.__decorate([
-    inject_1.define(),
-    inject_1.singleton(),
-    inject_1.factory()
+    (0, inject_1.define)(),
+    (0, inject_1.singleton)(),
+    (0, inject_1.factory)()
 ], DelayProvider);
 exports.DelayProvider = DelayProvider;
 //# sourceMappingURL=delayProvider.js.map

@@ -10,7 +10,7 @@ const manager3_1 = require("../mock/src/manager/manager3");
 describe('define', function () {
     let app;
     beforeEach(async () => {
-        app = index_1.createApp({
+        app = (0, index_1.createApp)({
             root: process.cwd() + '/test/mock'
         });
         await app.launch();
@@ -52,7 +52,7 @@ describe('define', function () {
         let Test2 = class Test2 {
         };
         Test2 = tslib_1.__decorate([
-            helpers_1.mixins(Test)
+            (0, helpers_1.mixins)(Test)
         ], Test2);
         let test = new Test2();
         test.on.should.be.ok;

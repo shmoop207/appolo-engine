@@ -14,12 +14,12 @@ let Manager2 = class Manager2 extends events_1.EventDispatcher {
     }
 };
 tslib_1.__decorate([
-    inject_1.inject(),
+    (0, inject_1.inject)(),
     tslib_1.__metadata("design:type", manager_1.Manager)
 ], Manager2.prototype, "manager", void 0);
 Manager2 = tslib_1.__decorate([
-    inject_1.define(),
-    inject_1.singleton(),
+    (0, inject_1.define)(),
+    (0, inject_1.singleton)(),
     tslib_1.__metadata("design:paramtypes", [])
 ], Manager2);
 exports.Manager2 = Manager2;

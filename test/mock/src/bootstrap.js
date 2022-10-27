@@ -13,29 +13,29 @@ let Bootstrap = class Bootstrap {
     }
 };
 tslib_1.__decorate([
-    inject_1.inject(),
+    (0, inject_1.inject)(),
     tslib_1.__metadata("design:type", manager_1.Manager)
 ], Bootstrap.prototype, "manager", void 0);
 tslib_1.__decorate([
-    inject_1.inject(),
+    (0, inject_1.inject)(),
     tslib_1.__metadata("design:type", delay_1.Delay)
 ], Bootstrap.prototype, "delay", void 0);
 tslib_1.__decorate([
-    inject_1.inject(),
+    (0, inject_1.inject)(),
     tslib_1.__metadata("design:type", delay_1.Delay)
 ], Bootstrap.prototype, "delay2", void 0);
 tslib_1.__decorate([
-    inject_1.inject(),
+    (0, inject_1.inject)(),
     tslib_1.__metadata("design:type", Object)
 ], Bootstrap.prototype, "dbMock", void 0);
 tslib_1.__decorate([
-    inject_1.inject(),
+    (0, inject_1.inject)(),
     tslib_1.__metadata("design:type", dbManager_1.DbManager)
 ], Bootstrap.prototype, "dbManagerNested", void 0);
 Bootstrap = tslib_1.__decorate([
-    inject_1.define(),
-    inject_1.singleton(),
-    index_1.bootstrap()
+    (0, inject_1.define)(),
+    (0, inject_1.singleton)(),
+    (0, index_1.bootstrap)()
 ], Bootstrap);
 exports.Bootstrap = Bootstrap;
 //# sourceMappingURL=bootstrap.js.map

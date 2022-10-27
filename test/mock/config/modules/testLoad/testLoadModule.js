@@ -9,7 +9,7 @@ let TestLoadModule = class TestLoadModule extends index_1.Module {
     }
 };
 TestLoadModule = tslib_1.__decorate([
-    index_1.module({})
+    (0, index_1.module)({})
 ], TestLoadModule);
 exports.TestLoadModule = TestLoadModule;
 //# sourceMappingURL=testLoadModule.js.map

@@ -12,7 +12,7 @@ let BeforeTest = class BeforeTest {
     }
 };
 BeforeTest = tslib_1.__decorate([
-    inject_1.define()
+    (0, inject_1.define)()
 ], BeforeTest);
 exports.BeforeTest = BeforeTest;
 //# sourceMappingURL=beforeTest.js.map
