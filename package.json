@@ -36,7 +36,7 @@
   "readmeFilename": "README.md",
   "dependencies": {
     "@appolo/events": "^8.0.2",
-    "@appolo/inject": "^8.0.13",
+    "@appolo/inject": "^8.0.14",
     "@appolo/utils": "^8.0.2",
     "tslib": "^2.4.0"
   },
