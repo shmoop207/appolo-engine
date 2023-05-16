@@ -2,7 +2,7 @@
 import fs = require('fs');
 import {Injector} from "@appolo/inject";
 import {ILogger} from "../interfaces/ILogger";
-import { Classes, Reflector, Functions} from '@appolo/utils';
+import {Classes, Reflector, Functions} from '@appolo/utils';
 import {IExported} from "../modules/interfaces/IModule";
 import {Define} from "@appolo/inject";
 import {Util as InjectUtil} from "@appolo/inject";
@@ -22,7 +22,9 @@ export class Util {
         return Reflector.findReflectData(symbol, exported)
     }
 
-    public static findAllReflectData<T>(exported: IExported[], symbol: Symbol | string): (IExported & { metaData: T })[] {
+    public static findAllReflectData<T>(exported: IExported[], symbol: Symbol | string): (IExported & {
+        metaData: T
+    })[] {
 
         return Reflector.findAllReflectData(symbol, exported)
     }
@@ -86,6 +88,19 @@ export class Util {
         }
 
         return console
+    }
+
+    public static terminate(injector: Injector) {
+
+        return (code, reason) => (err) => {
+            if (err && err instanceof Error) {
+                Util.logger(injector).error(`process error ${code} ${reason}`);
+            }
+
+            Util.logger(injector).info(`process exit code: ${code} reason: ${reason}`)
+
+            setTimeout(() => process.exit(code), 500).unref()
+        }
     }
 }
 

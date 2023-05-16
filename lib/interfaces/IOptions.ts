@@ -3,6 +3,7 @@ export interface IOptions {
     root?: string
     environment?: string
     bootStrapClassId?: string
+    logProcessErrors?: boolean
 
 }
 

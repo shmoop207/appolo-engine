@@ -11,12 +11,13 @@ import {App} from "../app/app";
 import {BootstrapSymbol} from "../bootstrap/bootstrapDecorator";
 import {AppModuleOptionsSymbol} from "../modules/decoreators/moduleDecorators";
 import {IApp} from "../app/IApp";
-import   path = require('path');
-import   fs = require('fs');
+import path = require('path');
+import fs = require('fs');
 import {Objects, Classes, Promises} from '@appolo/utils';
 import {PipelineManager} from "../pipelines/pipelineManager";
 import {handleAfterDecorator, handleBeforeDecorator} from "../decoretors/propertyDecorators";
-import {Util} from "@appolo/inject";
+import {Util as InjectUtils} from "@appolo/inject";
+import {Util as EngineUtils} from "../util/util";
 import {EventBeforeInjectRegister, EventClassExport, EventInjectRegister} from "../events/IEvents";
 
 export class Launcher {
@@ -119,6 +120,8 @@ export class Launcher {
             return;
         }
 
+        this._handleProcessError();
+
         await this._initFiles();
 
         await this.initStaticModules();
@@ -168,11 +171,11 @@ export class Launcher {
 
         this._injector.events.instanceOwnCreated.on(this._onInstanceCreated, this);
 
-        await Util.runRegroupByParallel<IApp>(this._app.tree.children, app => (Reflect.getMetadata(AppModuleOptionsSymbol, app) || {}).parallel, app => (app as App).launcher.initInjector());
+        await InjectUtils.runRegroupByParallel<IApp>(this._app.tree.children, app => (Reflect.getMetadata(AppModuleOptionsSymbol, app) || {}).parallel, app => (app as App).launcher.initInjector());
 
         await (this._app.event.beforeInjectorInitialize as Event<void>).fireEventAsync();
 
-        this._injector.events.afterInitialize.on(()=> (this._app.event.afterInjectorInitialize as Event<void>).fireEventAsync(),this,{await:true});
+        this._injector.events.afterInitialize.on(() => (this._app.event.afterInjectorInitialize as Event<void>).fireEventAsync(), this, {await: true});
 
 
         await this._injector.initialize({
@@ -193,7 +196,7 @@ export class Launcher {
 
         await (this._app.event.beforeBootstrap as Event<void>).fireEventAsync();
 
-        await Util.runRegroupByParallel<IApp>(this._app.tree.children, app => (Reflect.getMetadata(AppModuleOptionsSymbol, app) || {}).parallel, app => (app as App).launcher.initBootStrap());
+        await InjectUtils.runRegroupByParallel<IApp>(this._app.tree.children, app => (Reflect.getMetadata(AppModuleOptionsSymbol, app) || {}).parallel, app => (app as App).launcher.initBootStrap());
 
         let bootstrapDef = this._injector.getDefinition(this._options.bootStrapClassId);
 
@@ -275,7 +278,7 @@ export class Launcher {
 
 
         if (Reflect.hasMetadata(BootstrapSymbol, fn)) {
-            this._options.bootStrapClassId = Util.getClassName(fn);
+            this._options.bootStrapClassId = InjectUtils.getClassName(fn);
         }
 
 
@@ -326,6 +329,18 @@ export class Launcher {
         this._files.length = 0;
         this._app = null;
     }
+
+    private _handleProcessError() {
+        if (!this._options.logProcessErrors || this._app.tree.parent) {
+            return;
+        }
+
+        process.once('uncaughtException', EngineUtils.terminate(this._injector)(1, 'Unexpected Error'))
+        process.once('unhandledRejection', EngineUtils.terminate(this._injector)(1, 'Unhandled Promise'))
+        process.once('SIGTERM', EngineUtils.terminate(this._injector)(0, 'SIGTERM'))
+        process.once('SIGINT', EngineUtils.terminate(this._injector)(0, 'SIGINT'))
+    }
+
 
 }
 
